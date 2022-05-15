@@ -14,7 +14,7 @@ const routes = [
   },
 
   {
-    path: '/create',
+    path: '/create/:contentId?',
     name: 'Create',
     component: Create
   },
