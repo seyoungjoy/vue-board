@@ -14,15 +14,17 @@ const routes = [
   },
 
   {
-    path: '/create',
+    path: '/create/:contentId?',
     name: 'Create',
     component: Create
   },
   {
     path: '/detail/:contentId',
     name: 'Detail',
-    component: Detail
+    component: Detail,
+    props:true,
   },
+  
 ]
 
 const router = new VueRouter({

@@ -3,7 +3,7 @@
     <input v-model="writer" placeholder="글쓴이"/>
     <input v-model="title" placeholder="제목"/>
     <textarea v-model="content" placeholder="내용"/>
-    <button @click="write">작성하기</button>
+    <button @click="index !== undefined ? update() : write()">{{index !== undefined ? '수정': '작성'}}</button>
   </div>
 </template>
 <script>
@@ -11,11 +11,13 @@ import data from '@/data'
 export default {
   name:'Create',
   data(){
+    const index = this.$route.params.contentId;
     return{
       data: data,
-      writer:"",
-      title:"",
-      content:""
+      writer:index !== undefined ? data[index].writer : "",
+      title:index !== undefined ? data[index].title : "",
+      content:index !== undefined ? data[index].content : "",
+      index:index,
     }
   },
   methods:{
@@ -28,7 +30,17 @@ export default {
       this.$router.push({
         path:'/',
       })
+    },
+    update(){
+      data[this.index].writer = this.writer;
+      data[this.index].title = this.title;
+      data[this.index].content = this.content;
+      alert('수정되었습니다');
+      this.$router.push({
+        name:'/'
+      })
     }
-  }
+  },
+  
 }
 </script>
