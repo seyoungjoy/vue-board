@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <b-table striped hover :items="data" :fields="fields" @click="detail(index)"></b-table>
+    <b-table striped hover :items="items" :fields="fields" @click="detail(index)"></b-table>
     <!-- <table>
       <tr>
         <td>글쓴이</td>
@@ -23,8 +23,25 @@ export default {
   name:'Read',
   data(){
     return{
-      data:data,
-      fields:['user_id', 'title', 'context']
+      items: data,
+      // data:data,
+      // fields:['user_id', 'title', 'context']
+      fields:[
+        {
+          key:'user_id',
+          label:'ID',
+          sortable:false
+        },
+        {
+          key:'title',
+          sortable:false
+        },
+        {
+          key:'context',
+          label:'내용',
+          sortable:false
+        },
+      ]
     }
   },
   methods:{
