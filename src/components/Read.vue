@@ -1,17 +1,19 @@
 <template>
   <div>
-    <table>
+
+    <b-table striped hover :items="data" :fields="fields" @click="detail(index)"></b-table>
+    <!-- <table>
       <tr>
         <td>글쓴이</td>
         <td>제목</td>
         <td>내용</td>
       </tr>
       <tr v-for="(value, index) in data" :key="index" @click="detail(index)">
-        <td>{{ value.writer }}</td>
+        <td>{{ value.user_id }}</td>
         <td>{{ value.title }}</td>
-        <td>{{ value.content }}</td>
+        <td>{{ value.context }}</td>
       </tr>
-    </table>
+    </table> -->
     <button @click="write">글쓰기</button>
   </div>
 </template>
@@ -21,7 +23,8 @@ export default {
   name:'Read',
   data(){
     return{
-      data:data
+      data:data,
+      fields:['user_id', 'title', 'context']
     }
   },
   methods:{
@@ -31,6 +34,7 @@ export default {
       })
     },
     detail(index){
+      alert(1);
       this.$router.push({
         name:'Detail',
         params:{
@@ -38,7 +42,6 @@ export default {
         }
       })
      
-
     }
   }
 

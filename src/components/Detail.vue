@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>{{data.writer}}</div>
+    <div>{{data.user_id}}</div>
     <div>{{data.title}}</div>
-    <div>{{data.content}}</div>
+    <div>{{data.context}}</div>
     <button @click="updateData">수정</button>
     <button @click="deleteData">삭제</button>
   </div>    
