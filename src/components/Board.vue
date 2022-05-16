@@ -1,18 +1,18 @@
 <template>
   <div>
     <h1>게시판</h1>
-    <b-table striped hover :items="items" :fields="fields"></b-table>
+    <b-table striped hover :items="getData" :fields="fields" @row-clicked="rowClick"></b-table>
+    <b-button @click="create">작성하기</b-button>
   </div>
 </template>
 
 <script>
-import data from '@/data'
+import data from '@/data';
+
   export default {
-      name:"Board",
+    name:"Board",
     data() {
       return {
-        items: data.Content,
-        // fields:['content_id', 'title', 'created_at']
         fields:[
             {
                 key:'content_id',
@@ -26,8 +26,33 @@ import data from '@/data'
                 key:'created_at',
                 label:'작성일'
             },
-        ]
+            {
+                key:'user_name',
+                label:'글쓴이'
+            },
+        ],
       }
     },
+    computed:{
+        getData(){
+            let items = data.Content.sort((a,b)=>{return b.content_id - a.content_id})
+            items = items.map(contentItem => {return {...contentItem, user_name:data.User.filter(userItem => userItem.user_id === contentItem.user_id)[0].name}})
+            return items;
+        }
+    },
+    methods:{
+        rowClick(item, index, e){
+            this.$router.push({
+              name:'Detail',
+              params:{contentId : item.content_id}
+            })
+        },
+        create(){
+          this.$router.push({
+            name:'Create',
+          })
+        }
+    }
+
   }
 </script>

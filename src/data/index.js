@@ -2,17 +2,17 @@ export default {
     User: [
       {
         user_id: 1,
-        name: 'lelana',
+        name: 'seyoung',
         created_at: '2018-09-11 11:42:11'
       },
       {
         user_id: 2,
-        name: '아이린',
+        name: 'gildong',
         created_at: '2018-09-11 11:42:11'
       },
       {
         user_id: 3,
-        name: '조이',
+        name: 'joy',
         created_at: '2018-09-11 11:42:11'
       },
     ],
@@ -20,24 +20,24 @@ export default {
       {
         content_id: 1,
         user_id: 1,
-        title: '개린이 르라나의 강의 알람표',
-        context: '아직 미정입니다.',
+        title: '안녕하세요',
+        context: '하하하하핳',
         created_at: '2019-01-01 13:11:42',
         updated_at: null
       },
       {
         content_id: 2,
         user_id: 3,
-        title: '레드벨벳 많이 사랑해 주세요^^',
-        context: '화이팅!',
+        title: 'react 공부하고싶어요',
+        context: 'react 궁금해요오오',
         created_at: '2019-01-02 13:11:42',
         updated_at: null
       },
       {
         content_id: 3,
         user_id: 2,
-        title: '생일 축하해주신 여러분 감사합니다!',
-        context: '^^',
+        title: 'css library 뭐가 제일 좋나요?',
+        context: 'ㅈㄱㄴ',
         created_at: '2019-03-29 13:11:42',
         updated_at: null
       }
@@ -47,7 +47,7 @@ export default {
         comment_id: 1,
         user_id: 1,
         content_id: 3,
-        context: '생일 축하해요!',
+        context: '반갑습니다',
         created_at: '2019-03-29 14:11:11',
         updated_at: null
       },
@@ -55,7 +55,7 @@ export default {
         comment_id: 2,
         user_id: 3,
         content_id: 3,
-        context: '주현언니 생일 축하해요!',
+        context: '그러게요....!',
         created_at: '2019-03-29 16:11:11',
         updated_at: null
       },
@@ -63,7 +63,7 @@ export default {
         comment_id: 3,
         user_id: 2,
         content_id: 1,
-        context: '강의 잘 보고 있습니다 ^^',
+        context: '뷰는 부트스트랩, 뷰티파이 많이 사용하던데요.',
         created_at: '2019-03-29 14:11:11',
         updated_at: null
       }
