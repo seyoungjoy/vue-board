@@ -1,4 +1,4 @@
-# vue-notice-board-pr
+# vue-board-pr
 
 ## Project setup
 ```
