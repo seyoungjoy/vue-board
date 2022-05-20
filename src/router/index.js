@@ -1,30 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Read from '@/components/Read'
-import Create from '@/components/Create'
+import Home from '@/components/Home'
+import Board from '@/components/Board'
 import Detail from '@/components/Detail'
+import Create from '@/components/Create'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Read',
-    component: Read
-  },
-
-  {
-    path: '/create/:contentId?',
-    name: 'Create',
-    component: Create
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/detail/:contentId',
+    path: '/board/free',
+    name: 'Board',
+    component: Board,
+  },
+  {
+    path: '/board/free/detail/:contentId?',
     name: 'Detail',
     component: Detail,
-    props:true,
   },
-  
+  {
+    path: '/board/create/:contentId?',
+    name: 'Create',
+    component: Create,
+  },
+
 ]
 
 const router = new VueRouter({
