@@ -35,8 +35,10 @@ import data from '@/data';
     },
     computed:{
         getData(){
-            let items = data.Content.sort((a,b)=>{return b.content_id - a.content_id})
-            items = items.map(contentItem => {return {...contentItem, user_name:data.User.filter(userItem => userItem.user_id === contentItem.user_id)[0].name}})
+            let items = data.Content.sort((a,b)=>{return b.content_id - a.content_id})// content_id의 index로 내림차순 정렬된 배열
+            items = items.map(contentItem => {
+              return {...contentItem, user_name:data.User.filter(userItem => userItem.user_id === contentItem.user_id)[0].name}
+            })
             return items;
         }
     },
@@ -49,7 +51,7 @@ import data from '@/data';
         },
         create(){
           this.$router.push({
-            name:'Create',
+            name:"Create"
           })
         }
     }
