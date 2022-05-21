@@ -28,8 +28,8 @@ export default {
       {
         content_id: 2,
         user_id: 3,
-        title: 'react 공부하고싶어요',
-        context: 'react 궁금해요오오',
+        title: 'vue가 프레임워크인가요 라이브러리인가요?',
+        context: 'ㅈㄱㄴ',
         created_at: '2019-01-02 13:11:42',
         updated_at: null
       },
@@ -46,7 +46,7 @@ export default {
       {
         comment_id: 1,
         user_id: 1,
-        content_id: 3,
+        content_id: 1,
         context: '반갑습니다',
         created_at: '2019-03-29 14:11:11',
         updated_at: null
@@ -54,15 +54,15 @@ export default {
       {
         comment_id: 2,
         user_id: 3,
-        content_id: 3,
-        context: '그러게요....!',
+        content_id: 2,
+        context: 'vue는 프레임워크입니다. 필요에 따라 자유롭게 사용가능한 라이브러리와 달리 프레임워크 내부에서 정해진 틀에 따라 사용해야합니다.',
         created_at: '2019-03-29 16:11:11',
         updated_at: null
       },
       {
         comment_id: 3,
         user_id: 2,
-        content_id: 1,
+        content_id: 3,
         context: '뷰는 부트스트랩, 뷰티파이 많이 사용하던데요.',
         created_at: '2019-03-29 14:11:11',
         updated_at: null
