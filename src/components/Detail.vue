@@ -57,26 +57,16 @@ export default {
       this.$router.push({
         path:"/board/free"
       })
+    },
+    updateData(){
+      this.$router.push({
+        path:`/board/create/${this.contentId}`
+      })
     }
 
-      // deleteData(){
-      //     const deleteDataId = data.Content.findIndex(item => item.content_id === this.contentId);
-      //     data.Content.splice(deleteDataId,1);
-      //     this.$router.push({
-      //         path:"/board/free"
-      //     })
-      // },
-      // updateData(){
-      //     this.$router.push({
-      //         name:'Create',
-      //         params: {contentId : this.contentId}
-      //     })
-      // }
+    
   },
-  beforeMount() {
-    const contentData = data.Content.filter(item => item.content_id === this.contentId)[0]
-    console.log(contentData)
-  }
+
 };
 </script>
 <style scoped>
