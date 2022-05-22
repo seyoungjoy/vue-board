@@ -29,6 +29,9 @@
       <div class="content-detail-comment">
         <CommendList :contentId="contentId"/>
       </div>
+      <!-- <div class="content-detail-comment">
+        <PrCommentList :contentId="contentId"/>
+      </div> -->
 
     </b-card>
   </div>
@@ -37,10 +40,13 @@
 <script>
 import data from "@/data";
 import CommendList from "@/components/CommendList.vue"
+// import PrCommentList from "./PrCommentList.vue"
+
 export default {
   name: "ContentDetail",
     components:{
       CommendList,
+      // PrCommentList
   },
   data() {
     const contentId = Number(this.$route.params.contentId);
@@ -67,9 +73,8 @@ export default {
         path:`/board/create/${this.contentId}`
       })
     }
-
-    
   },
+
 
 
 };

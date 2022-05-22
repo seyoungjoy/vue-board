@@ -54,7 +54,6 @@ import data from '@/data';
             name:"Create"
           })
         }
-    }
-
+    },
   }
 </script>
