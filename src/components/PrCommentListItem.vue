@@ -5,7 +5,6 @@
     <div>{{ commentItem.context }}</div>
     <b-button @click="updateComment">수정</b-button>
     <b-button @click="deleteComment">삭제</b-button>
-
   </div>
 </template>
 
