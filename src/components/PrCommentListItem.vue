@@ -5,12 +5,7 @@
     <div>{{ commentItem.context }}</div>
     <b-button @click="updateComment">수정</b-button>
     <b-button @click="deleteComment">삭제</b-button>
-    <hr>
-    <div v-if="updateMode">
-      <b-textarea></b-textarea>
-      <b-button>수정하기</b-button>
 
-    </div>
   </div>
 </template>
 
@@ -25,7 +20,6 @@ export default {
   data(){
     return{
       name:'',
-      updateMode:false
     }
   },
   created(){
@@ -33,7 +27,6 @@ export default {
   },
   methods:{
     updateComment(){
-      this.updateMode = !this.updateMode;
 
     },
     deleteComment(){
