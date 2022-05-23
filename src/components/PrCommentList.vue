@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div v-for="item in commentObj" :key="item.comment_id">
         <PrCommentListItem :commentItem="item" :reload="reload"/>
     </div>
