@@ -9,6 +9,7 @@
     <div v-if="updateMode">
       <b-textarea></b-textarea>
       <b-button>수정하기</b-button>
+
     </div>
   </div>
 </template>
