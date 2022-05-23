@@ -9,7 +9,7 @@
                 max-rows="6"
             ></b-form-textarea>
             <b-input-group-append>
-                <b-button variant="info" @click="createComment">작성하기</b-button>
+                <b-button variant="info" @click="isSubComment ? createSubComment() : createComment()">작성하기</b-button>
             </b-input-group-append>
         </b-input-group>
     </div>
@@ -20,7 +20,10 @@ export default {
     name:'CommentCreate',
     props:{
       contentId:Number,
-      reloadComment:Function
+      commentId:Number,
+      reloadComment:Function,
+      isSubComment:Boolean,
+      reloadSubComments:Function
     },
     data(){
         return{
@@ -52,7 +55,20 @@ export default {
             const second = today.getSeconds();
 
             return `${year}-${month}-${date} ${hour}:${minute}:${second}`
-        }
+        },
+        createSubComment(){
+            const subCommentData = {
+                subcomment_id:data.SubComment[data.Comment.length - 1].subcomment_id + 1,
+                user_id:1,
+                comment_id:this.commentId,
+                context:this.context,
+                created_at:this.getCreatedAt(),
+                updated_at:null
+            }
+            data.SubComment.push(subCommentData);
+            this.reloadSubComments();
+            this.context = '';
+        },
     }
 }
 </script>
