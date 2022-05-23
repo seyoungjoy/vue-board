@@ -66,6 +66,14 @@ export default {
         context: '뷰는 부트스트랩, 뷰티파이 많이 사용하던데요.',
         created_at: '2019-03-29 14:11:11',
         updated_at: null
+      },
+      {
+        comment_id: 4,
+        user_id: 1,
+        content_id: 3,
+        context: '저는 뷰티파이가 좋아요!',
+        created_at: '2019-03-29 14:11:11',
+        updated_at: null
       }
     ],
     SubComment: [
