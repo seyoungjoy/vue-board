@@ -12,6 +12,7 @@ export default {
     Header,
   }
 }
+
 </script>
 <style>
 #app {
